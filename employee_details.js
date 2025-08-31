@@ -1,7 +1,7 @@
 const employees = [
-    { id: 1, name: 'John Doe', age: 30, department: 'IT', salary: 50000 },
-    { id: 2, name: 'Alice Smith', age: 28, department: 'HR', salary: 45000 },
-    { id: 3, name: 'Bod Johnson', age: 35, department: 'Finance', salary: 60000 }
+    { id: 1, name: 'John Doe', age: 30, department: 'IT', salary: 50000, specialization: 'JavaScript' },
+    { id: 2, name: 'Alice Smith', age: 28, department: 'HR', salary: 45000, specialization: 'Python' },
+    { id: 3, name: 'Bod Johnson', age: 35, department: 'Finance', salary: 60000, specialization: 'Java' }
 ];
 // Function to display all employees
 function displayEmployees() {
@@ -24,6 +24,16 @@ function findEmployeeById(employeeId) {
     const foundEmployee = employees.find(employee => employee.id === employeeId);
     if (foundEmployee) {
         document.getElementById('employeesDetails').innerHTML = `<p>${foundEmployee.id}: ${foundEmployee.name}: ${foundEmployee.name} - ${foundEmployee.department} - $${foundEmployee.salary}</p>`;
+    }
+    else{
+        document.getElementById(`employeesDetails`).innerHTML = 'No employee has been found with this ID';
+    }
+}
+// Function to display employees details based on specialization
+function findSpecialization(employeeSpecialization) {
+    const specializationEmployee = employees.find(employee => employee.specialization === employeeSpecialization);
+    if (specializationEmployee) {
+        document.getElementById('employeesDetails').innerHTML = `<p>${specializationEmployee.id}: ${specializationEmployee.name}: ${specializationEmployee.name} - ${specializationEmployee.department} - ${specializationEmployee.specialization}</p>`;
     }
     else{
         document.getElementById(`employeesDetails`).innerHTML = 'No employee has been found with this ID';
