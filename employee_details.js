@@ -41,6 +41,12 @@ function findSpecialization() {
         document.getElementById('employeesDetails').innerHTML = `<p>${specializationEmployee.id}: ${specializationEmployee.name}: ${specializationEmployee.name} - ${specializationEmployee.department} - ${specializationEmployee.specialization}</p>`;
     }
     else{
-        document.getElementById(`employeesDetails`).innerHTML = 'No employee has been found with this ID';
+        document.getElementById(`employeesDetails`).innerHTML = 'No employee has been found with this specialization';
     }
+}
+// Function to display employees details based on specialization
+function displaySpecialization(){
+    const specializationEmployees = employees.filter(employee => employee.specialization === 'JavaScript');
+    const specializationEmployeesDisplay = specializationEmployees.map((employee, index) => `<p>${employee.id}: ${employee.name}: ${employee.department} - ${employee.specialization}</p>`).join('');
+    document.getElementById(`employeesDetails`).innerHTML = specializationEmployeesDisplay;
 }
