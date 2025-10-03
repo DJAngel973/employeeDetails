@@ -16,7 +16,7 @@ The main objective of this project is to demonstrate an understanding of the fol
 
 Manipulation of the DOM (Document Object Model) to interact with the webpage.
 
-Usage of JavaScript array methods such as `.map()`, `.filter()`, and `.reduce()`.
+Usage of JavaScript array methods such as `.map()`, `.filter()`, `.find()`, and `.reduce()`.
 
 Function creation and event handling.
 

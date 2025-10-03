@@ -1,0 +1,52 @@
+1. Dependencias de Node
+############################################
+/node_modules
+/jspm_packages/
+/package-lock.json      # Excluye si usas npm versions < 7
+/yarn.lock              # Excluye si usas yarn
+/pnpm-lock.yaml         # Excluye si usas pnpm
+
+2. Archivos de Compilación / Build / Temp
+###########################################
+/dist                   # Directorio de distribución o compilación
+/build                  # Directorio de construcción
+/.cache
+/tmp
+
+3. Archivos de Logs, Bases de Datos y Errores
+###############################################
+*.log
+*.sql
+*.sqlite
+*.sqlite-journal
+
+4. Archivos de Configuración Sensible y de Entorno
+###################################################
+
+¡IMPORTANTE! NUNCA subir claves o secretos.
+.env
+.env.*
+config/local.js
+.vscode/settings.json   # Configuración de usuario personal del editor
+.vscode/tasks.json
+.vscode/launch.json
+
+5. Archivos del Sistema Operativo
+###################################
+.DS_Store               # Archivos de macOS
+Thumbs.db               # Archivos de Windows
+
+6. Archivos de Testing y Cobertura
+####################################
+/coverage
+/lcov-report
+
+7. IDEs Comunes (Editores)
+#############################
+
+IntelliJ/Webstorm
+.idea/
+
+VS Code
+.vscode/
+!/.vscode/extensions.json  # Permite compartir extensiones recomendadas
