@@ -1,52 +1,236 @@
-1. Dependencias de Node
-############################################
-/node_modules
-/jspm_packages/
-/package-lock.json      # Excluye si usas npm versions < 7
-/yarn.lock              # Excluye si usas yarn
-/pnpm-lock.yaml         # Excluye si usas pnpm
+# ===================================
+# Dependencies & Package Managers
+# ===================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
 
-2. Archivos de Compilación / Build / Temp
-###########################################
-/dist                   # Directorio de distribución o compilación
-/build                  # Directorio de construcción
-/.cache
-/tmp
+# Package manager lock files (choose one strategy)
+package-lock.json       # Uncomment if using yarn primarily
+# yarn.lock             # Uncomment if using npm primarily
+pnpm-lock.yaml
 
-3. Archivos de Logs, Bases de Datos y Errores
-###############################################
-*.log
-*.sql
-*.sqlite
-*.sqlite-journal
+# ===================================
+# Build & Distribution
+# ===================================
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+.webpack/
+*.tsbuildinfo
 
-4. Archivos de Configuración Sensible y de Entorno
-###################################################
-
-¡IMPORTANTE! NUNCA subir claves o secretos.
+# ===================================
+# Environment & Configuration
+# ===================================
 .env
-.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# Configuration files with sensitive data
+config/production.js
+config/staging.js
 config/local.js
-.vscode/settings.json   # Configuración de usuario personal del editor
-.vscode/tasks.json
-.vscode/launch.json
+secrets/
+*.pem
+*.key
+*.crt
 
-5. Archivos del Sistema Operativo
-###################################
-.DS_Store               # Archivos de macOS
-Thumbs.db               # Archivos de Windows
+# ===================================
+# Logs & Debugging
+# ===================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
 
-6. Archivos de Testing y Cobertura
-####################################
-/coverage
-/lcov-report
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
 
-7. IDEs Comunes (Editores)
-#############################
+# ===================================
+# Testing & Coverage
+# ===================================
+coverage/
+*.lcov
+.nyc_output/
+test-results/
+junit.xml
+.coverage
+htmlcov/
+.pytest_cache/
+.jest/
+__tests__/__snapshots__/
 
-IntelliJ/Webstorm
-.idea/
+# ===================================
+# Docker
+# ===================================
+.dockerignore
+docker-compose.override.yml
+.docker/
 
-VS Code
+# ===================================
+# IDEs & Editors
+# ===================================
 .vscode/
-!/.vscode/extensions.json  # Permite compartir extensiones recomendadas
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# IntelliJ
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# ===================================
+# Operating System
+# ===================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===================================
+# Temporary Files
+# ===================================
+tmp/
+temp/
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.backup
+
+# ===================================
+# Security & Certificates
+# ===================================
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+ssl/
+certs/
+keys/
+
+# ===================================
+# Database
+# ===================================
+*.sqlite
+*.sqlite3
+*.db
+*.sql
+*.dump
+
+# ===================================
+# Miscellaneous
+# ===================================
+.sass-cache/
+*.css.map
+*.js.map
+*.min.js
+*.min.css
+
+# Storybook
+storybook-static/
+
+# ESLint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Serverless directories
+.serverless/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# ===================================
+# GitHub Actions (if needed)
+# ===================================
+# Uncomment if you want to ignore certain workflow artifacts
+# .github/workflows/secrets/
+
+# ===================================
+# Project Specific
+# ===================================
+# Add your project-specific ignores here
+# uploads/
+# public/images/uploads/
+# storage/
